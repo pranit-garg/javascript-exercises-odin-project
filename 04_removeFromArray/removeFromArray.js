@@ -1,14 +1,16 @@
 const removeFromArray = function(array, ...args) {
-    let returnArray = array;
+console.log(array);
+console.log(args);
+let returnArray = [];
 
-    for (let i = 0; i < returnArray.length; i++) {
-        for (let j = 0; j < args.length; j++) {
-            if (array[i] == args[j]) {
-                continue;
-            }
-        }
-    }
-    return returnArray;
+for (let i = 0; i < array.length; i++) {
+   if (!args.includes(array[i])) {
+    returnArray.push(array[i]);
+   }
+}
+
+return returnArray;
+
 };
 
 // Do not edit below this line
